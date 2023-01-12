@@ -35,7 +35,7 @@ public class ClientEndpoint {
     @ResponsePayload
     public GetClientResponse getClienteRequest (@RequestPayload GetClientRequest request){
         GetClientResponse response = new GetClientResponse();
-        response.setCliente(clientRepository.buscarCliente(request.getNombre()));
+        response.setCliente(clientRepository.buscarCliente(request.getNombre(),request.getId()));
 
         return response;
     }

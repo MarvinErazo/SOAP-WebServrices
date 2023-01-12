@@ -30,16 +30,25 @@ public class ClientRepository {
 
         clientes.put(marvin.getNombre(),marvin);
 
-        /*Cliente cl1 = new Cliente();
-        cl1.setId(1);
-        cl1.setNombre("Marvin");
-        cl1.setEmail("marvin@gmail.com");
-        cl1.setPais("ECU");*/
+        Cliente cl2 = new Cliente();
+        cl2.setId(2);
+        cl2.setNombre("Anthony");
+        cl2.setEmail("anthony@gmail.com");
+        cl2.setPais("COL");
+
+        clientes.put(cl2.getNombre(), cl2);
+
     }
 
-    public Cliente buscarCliente(String nombre){
+    public Cliente buscarCliente(String nombre, int id){
         Assert.notNull(nombre,"Error: Campo nombre vacio");
+
+        for(Cliente cl : clientes.values()){
+            if(cl.getId() == id && cl.getNombre() == nombre){
+                System.out.println(cl);
+                return cl;
+            }
+        }
         return clientes.get(nombre);
     }
-
 }

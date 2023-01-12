@@ -1,3 +1,6 @@
+<!--
+Formato de solicitud de un mensaje SOAP
+-->
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
                   xmlns:us="http://soap.ws/SOAPWebServices">
     <soapenv:Header/>

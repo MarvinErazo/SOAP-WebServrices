@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
 // Visite https://eclipse-ee4j.github.io/jaxb-ri 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2023.01.11 a las 08:47:47 PM ECT 
+// Generado el: 2023.01.12 a las 09:47:33 AM ECT 
 //
 
 
@@ -26,6 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,13 +37,15 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "nombre"
+    "nombre",
+    "id"
 })
 @XmlRootElement(name = "getClientRequest")
 public class GetClientRequest {
 
     @XmlElement(required = true)
     protected String nombre;
+    protected int id;
 
     /**
      * Obtiene el valor de la propiedad nombre.
@@ -66,6 +69,22 @@ public class GetClientRequest {
      */
     public void setNombre(String value) {
         this.nombre = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad id.
+     * 
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * Define el valor de la propiedad id.
+     * 
+     */
+    public void setId(int value) {
+        this.id = value;
     }
 
 }
