@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:us="http://soap.ws/SOAPWebServices">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <us:getClientRequest>
+            <us:nombre>Marvin</us:nombre>
+        </us:getClientRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
