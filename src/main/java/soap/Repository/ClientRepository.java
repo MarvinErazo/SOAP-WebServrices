@@ -8,11 +8,18 @@ import org.springframework.util.Assert;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+* Contiene una coleccion de clientes que devuelve el mismo parametro
+*/
 @Component
 public class ClientRepository {
 
     private static final Map<String,Cliente> clientes = new HashMap<>();
 
+    /*
+     * Constructor que contiene una anotacion @PostConstruct que permite generar
+     * clientes los cuales se vana solicitar en el servicio SOAP
+     */
     @PostConstruct
     public void InitialData(){
         Cliente marvin = new Cliente();

@@ -5,6 +5,10 @@
             targetNamespace = "http://soap.ws/SOAPWebServices"
             elementFormDefault="qualified">
 
+    <!--
+       Genera una clase que permite realizar peticiones al servicio SOAP
+       mediante el nombre del cliente y devuelve el nombre
+    -->
     <xs:element name="getClientRequest">
        <xs:complexType>
            <xs:sequence>
@@ -13,6 +17,10 @@
        </xs:complexType>
     </xs:element>
 
+    <!--
+       Genera una clase que permite recibir una respuesta al servicio SOAP
+       y devuelve un cliente
+    -->
     <xs:element name="getClientResponse">
         <xs:complexType>
             <xs:sequence>
@@ -21,6 +29,9 @@
         </xs:complexType>
     </xs:element>
 
+    <!--
+       Entidad cliente que se generara automaticamente con sus getters y setters
+    -->
     <xs:complexType name="cliente">
         <xs:sequence>
             <xs:element name="id" type="xs:int"/>

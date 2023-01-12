@@ -41,14 +41,21 @@
 
         <!-- Dependencias Externas -->
 
-        <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+        <!--
+         Es un estándar Java que permite a los desarrolladores de Java asignar clases Java a documentos XML y viceversa.
+        -->
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
             <version>2.3.1</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/wsdl4j/wsdl4j -->
+        <!--
+         Es una biblioteca Java para trabajar con documentos del lenguaje de descripción de servicios web (WSDL).
+         WSDL es un lenguaje basado en XML que se utiliza para describir la funcionalidad ofrecida por un servicio web.
+         Proporciona un conjunto de API para analizar y manipular documentos WSDL, así como para generar documentos WSDL
+         a partir de código Java
+         -->
         <dependency>
             <groupId>wsdl4j</groupId>
             <artifactId>wsdl4j</artifactId>
@@ -65,6 +72,13 @@
             </plugin>
 
             <plugin>
+                <!--
+                 El es un plugin de Maven para JAXB (Java Architecture for XML Binding)
+                 que se puede utilizar para generar clases Java a partir de archivos de esquema XML (XSD)
+                 y para crear esquemas XML a partir de clases Java durante el proceso de compilación de
+                 un proyecto Maven.
+                 Se usa principalmente para proyectos heredados que todavía usan servicios web SOAP
+                -->
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>jaxb2-maven-plugin</artifactId>
                 <version>3.1.0</version>
@@ -79,9 +93,11 @@
                 <configuration>
                     <extension>true</extension>
                     <sources>
+                        <!-- Ubicacion del archivo .xsd que genera las clases -->
                         <source>${project.basedir}/src/main/resources/cliente.xsd</source>
                     </sources>
                     <packageName>generated</packageName>
+                    <!-- Ubicacion donde se generaran las clases -->
                     <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
                     <clearOutputDir>false</clearOutputDir>
                 </configuration>
